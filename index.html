@@ -66,6 +66,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
   </head>
   <body>
+    <script type="text/javascript">
+      if (navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
